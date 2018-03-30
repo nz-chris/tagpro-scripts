@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         TagPro Auto Wait
-// @namespace    http://tampermonkey.net/
 // @version      2.0
 // @description  Wait for a 4 or 6 player TagPro game. Be alerted when it begins. Anti-AFK kick.
 // @author       Zagd
+// @downloadURL  https://github.com/zagd/tagpro-scripts/blob/master/auto-wait.user.js
+// @updateURL    https://github.com/zagd/tagpro-scripts/blob/master/auto-wait.user.js
 // @include      http://*.newcompte.fr:*
 // @require      http://userscripts-mirror.org/scripts/source/107941.user.js
 // @grant        GM_setValue
