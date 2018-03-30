@@ -51,7 +51,6 @@ function setUpWait(target, data) {
 }
 
 function wait(target, alert) {
-    console.log("In wait!");
     var playerCount = getPlayerCount();
     if (playerCount >= target) {
         new Audio("http://tagpro-diameter.koalabeast.com/sounds/alertlong.mp3").play();
