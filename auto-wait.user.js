@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Auto Wait
-// @version      2.2
+// @version      2.3
 // @description  Wait for a 4 or 6 player TagPro game. Be alerted when it begins. Anti-AFK kick.
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/blob/master/auto-wait.user.js
