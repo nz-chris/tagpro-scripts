@@ -25,11 +25,10 @@ How to use:
     - If there are between 1 and 3 players, send a message in chat saying "!wait 4".
     - If there are 4 or 5 players, send a message in chat saying "!wait 6".
     By default, the notification of the target player count being reached is an alarm noise and a voice saying "GO!".
-    ////// EPILEPSY WARNING \\\\\\
-    If you would like more notification than this, use either "!wait 4 alert" or "!wait 6 alert".
-    With this option, you will get the sound notifications, and a visual browser alert, which will flash the
-    screen red and blue, and flash the browser tab's title.
-    \\\\\\ EPILEPSY WARNING //////
+    EPILEPSY WARNING:
+        If you would like more notification than this, use either "!wait 4 alert" or "!wait 6 alert". With this option,
+        you will get the sound notifications, and a visual browser alert, which will flash the screen red and blue, and
+        flash the browser tab's title.
 
 Disclaimer:
     - If you fail to recognize the notifications, and get reported / kicked for AFK, I am not to blame.
