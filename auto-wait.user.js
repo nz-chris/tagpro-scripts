@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         TagPro Auto Wait
+// @name         TagPro Auto Wait (Pub Queue)
 // @version      2.4.0
 // @description  Wait for a 4 or 6 player TagPro game. Be alerted when it begins. Anti-AFK kick.
 // @author       Zagd
