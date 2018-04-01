@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         TagPro Auto Wait (Pub Queue)
-// @version      2.4.0
-// @description  Wait for a 4 or 6 player TagPro game. Be alerted when it begins. Anti-AFK kick.
+// @version      2.4.1
+// @description  Wait for a 4 or 6 player TagPro game. Be alerted when it begins. Anti the AFK kick.
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/blob/master/auto-wait.user.js
 // @updateURL    https://github.com/zagd/tagpro-scripts/blob/master/auto-wait.user.js
@@ -17,14 +17,14 @@
 ************************************************************************************************************************
 *************************************************READ ME / INSTRUCTIONS*************************************************
 ************************************************************************************************************************
-This script is to be used to wait for games of 4+ or 6+ players, whilst avoiding the AFK kick,
-and to be notified when the game of 4+ or 6+ players begins. If you begin waiting,
-you will continue waiting even as games end (unless of course the target player count is reached).
+This script is to be used to wait for games of 4+ or 6+ players, whilst avoiding the AFK kick, and to be notified when
+the game of 4+ or 6+ players begins. If you begin waiting, you will continue waiting even as games end, and new games
+start (unless of course the target player count is reached).
 
 How to use:
-    If there are between 1 and 3 players, send a message in chat saying "!wait 4".
-    If there are 4 or 5 players, send a message in chat saying "!wait 6".
-    By the default, the notification that the target player count has been reached is an alarm noise and "GO!".
+    - If there are between 1 and 3 players, send a message in chat saying "!wait 4".
+    - If there are 4 or 5 players, send a message in chat saying "!wait 6".
+    By default, the notification of the target player count being reached is an alarm noise and a voice saying "GO!".
     ////// EPILEPSY WARNING \\\\\\
     If you would like more notification than this, use either "!wait 4 alert" or "!wait 6 alert".
     With this option, you will get the sound notifications, and a visual browser alert, which will flash the
@@ -32,12 +32,12 @@ How to use:
     \\\\\\ EPILEPSY WARNING //////
 
 Disclaimer:
-    If you fail to recognize the notifications, and get reported / kicked for AFK, I am not to blame.
-    If you use "!wait 4" and get notified that there are 4 players, do not immediately use "!wait 6".
-    First, you should ask the people in game if they would like to wait for more players, or go.
-    If they agree to wait, then use "1wait 6". You do this at your own risk, and please realise that games
-    with at least 4 players record stats, so if you are waiting for 6 and the other players decide to begin
-    playing, you can and will be reported for AFK, and you will probably lose the game.
+    - If you fail to recognize the notifications, and get reported / kicked for AFK, I am not to blame.
+    - If you use "!wait 4" and get notified that there are 4 players, do not immediately use "!wait 6". First, you
+    should ask the people in game if they would like to wait for more players, or go. If they agree to wait, then use
+    "!wait 6". You do this at your own risk, and please realise that games with at least 4 players record stats, so if
+    you are waiting for 6 and the other players decide to begin playing, you can and will be reported for AFK, and you
+    will probably lose the game.
 ************************************************************************************************************************
 ************************************************************************************************************************
 ************************************************************************************************************************
