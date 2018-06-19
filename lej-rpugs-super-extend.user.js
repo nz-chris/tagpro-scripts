@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Lej's Ranked PUGs Super Extend
-// @version      1.1
-// @description  Add a button to Lej's Ranked PUGs matchmaking page, enabling you to extend for 1 hour.
+// @version      1.2
+// @description  Add a button to Lej's Ranked PUGs matchmaking page, enabling you to extend for 15 minutes.
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/lej-rpugs-super-extend.user.js
 // @updateURL    https://github.com/zagd/tagpro-scripts/raw/master/lej-rpugs-super-extend.user.js
