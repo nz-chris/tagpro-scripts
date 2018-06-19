@@ -26,5 +26,5 @@ window.onload = function() {
 };
 
 function superExtend() {
-    autokick = 3601;
+    autokick = 901;
 }
