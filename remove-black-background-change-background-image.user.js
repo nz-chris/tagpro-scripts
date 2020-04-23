@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Remove Black Background, Change Background Image
-// @version      1.0
+// @version      1.1
 // @description  Remove the black background from the TagPro canvas. Made with love using stolen code from NewCompte, nabby, and Catalyst.
 // @author       Zagd, but not really.
 // @include      *://tagpro.koalabeast.com/game
