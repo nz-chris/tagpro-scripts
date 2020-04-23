@@ -20,15 +20,19 @@ tagpro.ready(function () {
     tagpro.renderer.resizeAndCenterView();
     newCanvas.show();
 
-    // Fix the chat. Stolen from nabby.
-    const viewportOffset = $("#viewport").offset();
-    const viewportHeight = $("#viewport").height();
-    $("#chat").css({
-        left: viewportOffset.left + 5,
-        top: viewportOffset.top + viewportHeight - 35
-    });
-    $("#chatHistory").css({
-        left: viewportOffset.left + 5,
-        top: viewportOffset.top + viewportHeight - $("#chatHistory").outerHeight() - 45
-    });
+    setTimeout(
+        function() {
+            // Fix the chat. Stolen from nabby.
+            const viewportOffset = $("#viewport").offset();
+            const viewportHeight = $("#viewport").height();
+            $("#chat").css({
+                left: viewportOffset.left + 5,
+                top: viewportOffset.top + viewportHeight - 35
+            });
+            $("#chatHistory").css({
+                left: viewportOffset.left + 5,
+                top: viewportOffset.top + viewportHeight - $("#chatHistory").outerHeight() - 45
+            });
+        }, 1500
+    );
 });
