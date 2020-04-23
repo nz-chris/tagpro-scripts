@@ -1,15 +1,17 @@
 // ==UserScript==
 // @name         TagPro Remove Black Background
 // @version      1.0
-// @description  Remove the black background from the TagPro canvas. Made with love using stolen code from NewCompte (https://www.reddit.com/r/TagPro/comments/2xwwz4/userscript_newcomptes_transparent_canvas/) and nabby (https://gist.github.com/nabbynz/24c9c965b93e9f12660436d26c6e4ac1)
+// @description  Remove the black background from the TagPro canvas. Made with love using stolen code from NewCompte (https://www.reddit.com/r/TagPro/comments/2xwwz4/userscript_newcomptes_transparent_canvas/) and nabby (https://gist.github.com/nabbynz/24c9c965b93e9f12660436d26c6e4ac1).
 // @author       Zagd, but not really.
 // @include      *://tagpro.koalabeast.com/game
 // @include      *://*.newcompte.fr:*
 // @include      *://tagpro-maptest.koalabeast.com:*
+// @downloadURL  https://github.com/nz-chris/tagpro-scripts/raw/master/remove-black-background.user.js
+// @updateURL    https://github.com/nz-chris/tagpro-scripts/raw/master/remove-black-background.user.js
 // ==/UserScript==
 
 tagpro.ready(function () {
-    // Stolen from NewCompte
+    // Stolen from NewCompte.
     const oldCanvas = $(tagpro.renderer.canvas);
     const newCanvas = $('<canvas id="viewport" width="1280" height="800"></canvas>');
     oldCanvas.after(newCanvas);
