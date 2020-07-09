@@ -5,9 +5,10 @@
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/auto-wait.user.js
 // @updateURL    https://github.com/zagd/tagpro-scripts/raw/master/auto-wait.user.js
-// @include      http://tagpro-*.koalabeast.com:*
-// @include      http://*.jukejuice.com:*
-// @include      http://*.newcompte.fr:*
+// @include      *://tagpro.koalabeast.com/game
+// @include      *://tagpro.koalabeast.com/game?*
+// @include      *://*.newcompte.fr:*
+// @include      *://tagpro-maptest.koalabeast.com:*
 // @require      http://userscripts-mirror.org/scripts/source/107941.user.js
 // @grant        GM_setValue
 // @grant        GM_getValue
