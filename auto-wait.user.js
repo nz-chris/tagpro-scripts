@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Auto Wait (Pub Queue)
-// @version      2.4.2
+// @version      2.4.3
 // @description  Wait for a 4 or 6 player TagPro game. Be alerted when it begins. Anti the AFK kick.
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/auto-wait.user.js
@@ -91,8 +91,8 @@ function setUpWait(target, data) {
 function wait(target) {
     var playerCount = getPlayerCount();
     if (playerCount >= target) {
-        new Audio("http://tagpro-diameter.koalabeast.com/sounds/alertlong.mp3").play();
-        new Audio("http://tagpro-diameter.koalabeast.com/sounds/go.mp3").play();
+        new Audio("https://tagpro.koalabeast.com/sounds/alertlong.mp3").play();
+        new Audio("https://tagpro.koalabeast.com/sounds/go.mp3").play();
         if (visual_alert) {
             flash_alert();
         }
