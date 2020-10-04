@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Auto Wait (Pub Queue)
-// @version      3.0.1
+// @version      3.0.2
 // @description  Wait for a 4 or 6 player TagPro game (without getting AFK kicked). Be alerted when it begins.
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/auto-wait.user.js
@@ -117,8 +117,8 @@ const waiter = {
 
         SOUND_ALERTS.forEach(sound => sound.volume = MAIN_SOUND_ALERTS_VOLUME_COEFFICIENT);
         waiter.log(`Set main alert sounds' volume to ${MAIN_SOUND_ALERTS_VOLUME_COEFFICIENT}.`);
-        WARN_WHEN_4_SOUND_ALERTS.forEach(sound => sound.volume = MAIN_SOUND_ALERTS_VOLUME_COEFFICIENT);
-        waiter.log(`Set main alert sounds' volume to ${WARN_WHEN_4_SOUND_ALERTS_VOLUME_COEFFICIENT}.`);
+        WARN_WHEN_4_SOUND_ALERTS.forEach(sound => sound.volume = WARN_WHEN_4_SOUND_ALERTS_VOLUME_COEFFICIENT);
+        waiter.log(`Set 'warn when 4' alert sounds' volume to ${WARN_WHEN_4_SOUND_ALERTS_VOLUME_COEFFICIENT}.`);
 
         waiter.insertNotifyingHtml();
 
