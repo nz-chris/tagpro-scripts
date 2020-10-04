@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Chat Enhancer
-// @version      0.1.0
+// @version      0.1.1
 // @description  Chat enhancer. So far, it will just allow you to move with arrow keys whilst typing a message.
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/chat-enhancer.user.js

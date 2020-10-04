@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Hide Cursor
-// @version      1.0.1
+// @version      1.0.2
 // @description  Hide your inactive cursor when playing TagPro
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/hide-cursor.user.js
