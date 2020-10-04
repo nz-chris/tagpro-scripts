@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Hide Cursor
-// @version      1.0
+// @version      1.0.1
 // @description  Hide your inactive cursor when playing TagPro
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/hide-cursor.user.js
@@ -11,44 +11,52 @@
 // @include      *://tagpro-maptest.koalabeast.com:*
 // ==/UserScript==
 
-const activeTimeout = 3000; // ms.
+const PLAYABLE_STATES = [1, 5];
+
+const ACTIVE_TIMEOUT = 3000; // ms.
+
 let active = 1;
 let activeCheckTimeout;
 
-function onInactive() {
+const onInactive = () => {
     active = 0;
     document.documentElement.style.cursor = "none";
-}
+};
 
-function onActive() {
+const onActive = () => {
     if (!active) {
         active = 1;
         document.documentElement.style.cursor = null;
     }
     clearTimeout(activeCheckTimeout);
-    activeCheckTimeout = setTimeout(onInactive, activeTimeout);
-}
+    activeCheckTimeout = setTimeout(onInactive, ACTIVE_TIMEOUT);
+};
 
-function start() {
+const start = () => {
     addEventListener("mousemove", onActive);
-    activeCheckTimeout = setTimeout(onInactive, activeTimeout);
+    activeCheckTimeout = setTimeout(onInactive, ACTIVE_TIMEOUT);
 }
 
-function stop() {
+const stop = () => {
     onActive();
     removeEventListener("mousemove", onActive);
     clearTimeout(activeCheckTimeout);
-}
+};
 
-tagpro.ready(function () {
-    if (tagpro.state === 1) {
+tagpro.ready(() => {
+    if (PLAYABLE_STATES.includes(tagpro.state)) {
         start();
     } else {
-        tagpro.socket.on("time", function ({ state }) {
-            if (state === 1) {
-                start();
-            }
-        });
+        tagpro.socket.on("time", ({ state }) => PLAYABLE_STATES.includes(state) && start());
     }
+
     tagpro.socket.on("end", stop);
+});
+
+addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        if (!tagpro) {
+            start();
+        }
+    }, ACTIVE_TIMEOUT);
 });
