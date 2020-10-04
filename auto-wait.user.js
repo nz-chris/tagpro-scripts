@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TagPro Auto Wait (Pub Queue)
-// @version      3.0.0
+// @version      3.0.1
 // @description  Wait for a 4 or 6 player TagPro game (without getting AFK kicked). Be alerted when it begins.
 // @author       Zagd
 // @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/auto-wait.user.js
@@ -25,8 +25,8 @@ waiting even as games end, and new games start (unless of course the target play
 How to use:
     - If there are between 1 and 3 players, send a message in chat saying "!wait 4".
     - If there are 4 or 5 players, send a message in chat saying "!wait 6".
-    - Alternatively, you can skip straight to "!wait 6". However by default, you will be given a warning when there are
-      4 players in the game. This is because a game with 4 players is considered a proper game (for stats etc.).
+    - Alternatively, you can skip straight to "!wait 6". However by default, you will be given a sound alert when there
+      are 4 players in the game. This is because a game with 4 players is considered a proper game (for stats etc.).
     - At any point, you can change your target player using the above messages.
     - When waiting, there will be a notifying message at the top of the page along with a button to stop waiting
       (the blinking green light indicates when button presses are sent to the server to prevent getting kicked).
@@ -39,7 +39,9 @@ By default, the alert of the target player count being reached consists of:
 
 There are some user-changeable properties just below!
 
-Disclaimer: If you fail to recognize the alerts/notifications and get reported/kicked for AFK, I am not to blame.
+Disclaimer / warnings:
+    - If you fail to recognize the alerts/notifications and get reported/kicked for AFK, I am not to blame.
+    - Do not wait while you have the flag, otherwise you risk getting kicked for turtle.
 ************************************************************************************************************************
 ************************************************************************************************************************
 ************************************************************************************************************************
@@ -133,7 +135,7 @@ const waiter = {
         if (waiter.waiting && !waiter.waitingInterval) {
             waiter.log(`Started waiting for ${waiter.playerTarget} players.`);
             if (waiter.playerCount >= waiter.playerTarget) {
-                waiter.log("There are enough players already. No BACK_FROM_WAITING_MESSAGE will be sent.")
+                waiter.log("There are enough players already. No BACK_FROM_WAITING_MESSAGE will be sent.");
                 waiter.enoughPlayersInitially = true;
             }
             waiter.waitingInterval = setInterval(waiter.wait, 1000);
@@ -158,7 +160,7 @@ const waiter = {
             !waiter.enoughPlayersInitially && waiter.chat(BACK_FROM_WAITING_MESSAGE);
             return;
         } else if (WARN_WHEN_4 && !waiter.warnedOf4 && playerCount >= 4) {
-            waiter.log("4 players are now in the game. Playing warning sounds.")
+            waiter.log("4 players are now in the game. Playing warning sounds.");
             WARN_WHEN_4_SOUND_ALERTS.forEach(sound => sound.play());
             waiter.warnedOf4 = true;
         }
@@ -271,7 +273,7 @@ const waiter = {
     },
 
     onSpectatorChange: (spectating = tagpro.spectator) => {
-        waiter.log(`Your "spectator" state has changed. You are ${spectating ? "" : "not "}spectating.`)
+        waiter.log(`Your "spectator" state has changed. You are ${spectating ? "" : "not "}spectating.`);
         if (spectating) {
             waiter.clearShowWaitingNotifierTimeout();
             waiter.hideWaitingNotifier();
@@ -392,7 +394,7 @@ const waiter = {
         waiter.flashAlert = flashAlert;
     },
 
-    testMode: true,
+    testMode: false,
     log: (...messages) => waiter.testMode && console.log("[TagPro Auto Wait (Pub Queue)] ::", ...messages)
 };
 
