@@ -3,6 +3,8 @@
 // @version      1.0
 // @description  Hide your inactive cursor when playing TagPro
 // @author       Zagd
+// @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/hide-cursor.user.js
+// @updateURL    https://github.com/zagd/tagpro-scripts/raw/master/hide-cursor.user.js
 // @include      *://tagpro.koalabeast.com/game
 // @include      *://tagpro.koalabeast.com/game?*
 // @include      *://*.newcompte.fr:*
