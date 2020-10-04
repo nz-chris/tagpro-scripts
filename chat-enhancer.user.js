@@ -25,7 +25,7 @@ const handleKey = e => {
     const dir = key.match(/Arrow(.*)/)[1];
     const isPressing = e.type === "keydown";
 
-    tagpro.players[tagpro.playerId].pressing[arrow] !== isPressing && tagpro.sendKeyPress(dir, isReleasing);
+    tagpro.players[tagpro.playerId].pressing[dir] !== isPressing && tagpro.sendKeyPress(dir, !isPressing);
 };
 
 const start = () => {

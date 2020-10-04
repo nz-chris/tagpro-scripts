@@ -11,9 +11,7 @@
 // @include      *://tagpro-maptest.koalabeast.com:*
 // ==/UserScript==
 
-addEventListener("DOMContentLoaded", () => {
-    const slider = document.getElementById("volumeSlider");
-    if (slider) {
-        slider.style.outline = "0";
-    }
-});
+const slider = document.getElementById("volumeSlider");
+if (slider) {
+    slider.style.outline = "0";
+}

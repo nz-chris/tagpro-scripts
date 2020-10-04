@@ -53,10 +53,8 @@ tagpro.ready(() => {
     tagpro.socket.on("end", stop);
 });
 
-addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        if (!tagpro) {
-            start();
-        }
-    }, ACTIVE_TIMEOUT);
-});
+setTimeout(() => {
+    if (!tagpro) {
+        start();
+    }
+}, ACTIVE_TIMEOUT);
