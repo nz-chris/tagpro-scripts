@@ -2,8 +2,8 @@
 // @name         TagPro Bypass Private Game 4 Player Minimum
 // @version      1.0.0
 // @author       Zagd
-// @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/private-game-4-player-bypass.user
-// @updateURL    https://github.com/zagd/tagpro-scripts/raw/master/private-game-4-player-bypass.user
+// @downloadURL  https://github.com/zagd/tagpro-scripts/raw/master/private-game-4-player-bypass.user.js
+// @updateURL    https://github.com/zagd/tagpro-scripts/raw/master/private-game-4-player-bypass.user.js
 // @include      *://tagpro.koalabeast.com/groups/*
 // ==/UserScript==
 
