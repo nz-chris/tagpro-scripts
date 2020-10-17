@@ -12,22 +12,14 @@ const launchButton = document.getElementById("launch-private-btn");
 let needMsgCount = 0;
 
 if (launchButton) {
-    const getNeedMsgsCount = () => {
-        const chatLog = document.querySelector(".chat-log");
-        const count = [...chatLog.querySelectorAll(".chat-message")]
-            .filter(msg => msg.innerText.match(/^Need [123] more players to launch private game\.$/))
-            .length;
-        return count;
-    };
+    const getNeedMsgsCount = () => [...document.querySelector(".chat-log").querySelectorAll(".chat-message")]
+        .filter(msg => msg.innerText.match(/^Need [123] more players to launch private game\.$/))
+        .length;
 
-    const setNeedMsgsCount = () => {
-        needMsgCount = getNeedMsgsCount();
-    };
+    const setNeedMsgsCount = () => needMsgCount = getNeedMsgsCount();
 
     const onLaunch = () => {
-        if (getNeedMsgsCount() > needMsgCount) {
-            location.href = "https://tagpro.koalabeast.com/games/find";
-        }
+        if (getNeedMsgsCount() > needMsgCount) location.href = "https://tagpro.koalabeast.com/games/find";
     };
 
     launchButton.addEventListener("mousedown", setNeedMsgsCount);
